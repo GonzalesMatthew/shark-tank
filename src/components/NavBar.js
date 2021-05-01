@@ -17,7 +17,9 @@ const NavBar = () => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Shark Tank</NavbarBrand>
+        <NavbarBrand>
+          <Link to="/">Shark Tank</Link>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

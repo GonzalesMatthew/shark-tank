@@ -39,7 +39,7 @@ function SharkTank({
           <Button
             color="danger"
             onClick={killStudent}
-            disabled={livingStudents.length <= 0}
+            disabled={livingStudents().length <= 0}
           >
             SharkAttack
           </Button>
