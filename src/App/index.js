@@ -10,8 +10,6 @@ function App() {
 
   useEffect(() => {
     setStudents(livingStudents());
-  }, []);
-  useEffect(() => {
     setGraveyard(dearlyBeloved());
   }, []);
 

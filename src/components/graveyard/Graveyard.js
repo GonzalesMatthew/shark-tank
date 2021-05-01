@@ -3,8 +3,7 @@ import { Container } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import GraveStone from './GraveStone';
 
-// function SharkTank({ students, setStudents }) {
-function Cemetery({ graveyard }) {
+function Graveyard({ graveyard, color }) {
   return (
     <>
       <Container>
@@ -15,6 +14,7 @@ function Cemetery({ graveyard }) {
             id={graveInfo.id}
             firstName={graveInfo.firstName}
             lastName={graveInfo.lastName}
+            color={color}
           />
         ))}
       </Container>
@@ -22,9 +22,10 @@ function Cemetery({ graveyard }) {
   );
 }
 
-Cemetery.propTypes = {
+Graveyard.propTypes = {
   graveyard: PropTypes.array.isRequired,
-  setGraveyard: PropTypes.func.isRequired
+  setGraveyard: PropTypes.func.isRequired,
+  color: PropTypes.string.isRequired
 };
 
-export default GraveStone;
+export default Graveyard;
