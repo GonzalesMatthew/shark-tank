@@ -11,19 +11,21 @@ const GraveStone = (
   {
     id,
     firstName,
-    lastName
+    lastName,
+    color
   }
 ) => (
-    <Card body>
-      <CardTitle tag="h5">Here Lies:</CardTitle>
-      <CardText>{firstName} {lastName} {id}</CardText>
+    <Card body color={color}>
+      <CardTitle tag="h5">Here Lies Student {id}:</CardTitle>
+      <CardText>{firstName} {lastName}</CardText>
     </Card>
 );
 
 GraveStone.propTypes = {
   id: PropTypes.number.isRequired,
   firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired
+  lastName: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired
 };
 
 export default GraveStone;

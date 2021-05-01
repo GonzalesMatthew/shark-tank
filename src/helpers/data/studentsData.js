@@ -157,13 +157,18 @@ function dearlyBeloved() {
   return deadStudentsArray;
 }
 
-function followTheLight(studentId) {
+function followTheLight() {
   // take studentId, find that student, and change student.isDead to true
-  students.forEach((response) => {
-    if (response.id === studentId) {
-      response.isDead = true;
-    }
-  });
+  const currentLiveStudents = livingStudents();
+  const randomStudent = currentLiveStudents[Math.floor(Math.random() * currentLiveStudents.length)];
+
+  const index = students.indexOf(randomStudent);
+
+  students[index].isDead = true;
+
+  return [livingStudents(), dearlyBeloved()];
 }
 
-export { livingStudents, dearlyBeloved, followTheLight };
+export {
+  livingStudents, dearlyBeloved, followTheLight, students
+};
