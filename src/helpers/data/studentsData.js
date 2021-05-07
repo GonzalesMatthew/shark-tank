@@ -3,7 +3,7 @@ const students = [
     id: 1,
     firstName: 'Matthew',
     lastName: 'Gonzales',
-    isDead: true
+    isDead: false
   },
   {
     id: 2,
